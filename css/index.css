@@ -1,0 +1,53 @@
+#box{
+    width: 700px;
+    height: 400px;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    margin:200px 0 0 -350px;
+    background: url("../img/0.jpg") no-repeat;
+}
+#box .page1{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform-origin: left center;
+    transform-style: preserve-3d;
+    transform:perspective(00px)  rotateY(0deg);
+    z-index: 3;
+}
+.page1 .front{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url("../img/0.jpg") no-repeat right top;
+    z-index: 3;
+    backface-visibility: hidden;
+}
+.page1 .back{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url("../img/1.jpg") no-repeat left top;
+    z-index: 1;
+    transform: scale(-1,1);
+}
+#box .page2{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: url("../img/1.jpg") no-repeat right top;
+    z-index: 1;
+}
+/*
+#box:active .page1{
+    transform: perspective(800px) rotateY(-180deg);
+}*/
